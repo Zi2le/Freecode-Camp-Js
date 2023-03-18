@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./romans.css">
+</head>
+<body>
+    <a href="./index.html">index html</a > 
+    <h1>roman numerials converter</h1>
+    <div class="ris">
+        <label for="num" class="label">enter a number</label> <br>
+   <input type="number" name="num" id="num" min="0" max="3999"> <br>
+   <button>Convert To Romans</button>
+</div>
+
+
+<script>
+    let btn = document.querySelector('button')
+    let para = document.createElement('p')
+    let div = document.querySelector('.ris')
+    div.appendChild(para)
+   
+    
+    btn.addEventListener('click', xander)
+    function xander(num){
+        let para1 = document.createElement('p')
+        let input = document.querySelector('#num')
+        num = input.value
+        let units = ['','I','II','III','IV','V','VI','VII','VII','IX']
+        let tens = ['','X','XX','XXX','XL','L','LX','LXX','LXXX','XC']
+        let hundred = ['','C','CC','CCC','CD','D','DC','DCC','DCCC','CM']
+        let thousands = ['','M','MM','MMM']
+       
+    if(num.length === 4) {
+      num = thousands[num[0]] + hundred[num[1]] + tens[num[2]] + units[num[3]]
+         
+    }
+    else if(num.length === 3){
+        num = hundred[num[0]] + tens[num[1]] + units[num[2]]
+    
+    }
+    else if (num.length  === 2){
+        num = tens[num[0]] + units[num[1]]
+    }
+    else {
+        num = units[num[0]]
+    }
+    
+    
+    
+        // return console.log( typeof num)
+        para.textContent = num 
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    background-color:darkgrey;
+} 
+h1{
+    text-transform: capitalize;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 44px;
+   line-height: .5;
+   margin-top: 50px;
+   color: beige;
+   text-align: center;
+}
+label{
+    text-transform: capitalize;
+    /* margin-bottom: 200px; */
+  font-size: 25px;
+}
+div{
+    border: 2px dashed transparent;
+    height: 600px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 55px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+outline: none;
+border: 2px solid grey;
+height: 50px;
+width: 250px;
+margin-bottom: 160px;
+padding-left: 10px;
+}
+button{
+    height: 50px;
+    width: 250px;
+     margin-bottom: 70px; 
+     border-radius: 3px;
+}
+p{
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: brown;
+}
+

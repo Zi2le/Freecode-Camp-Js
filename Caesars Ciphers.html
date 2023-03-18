@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./caesars ciphers.css">
+</head>
+<body>
+  <a href="./index.html">index html</a > 
+    <div class="ris">
+      <h1>ceasars ciphers</h1>
+       <label for="pal">enter text</label> <br>
+   <input type="text" name="pal" id="pal" placeholder="convert to cipher"><br>
+   <!-- <button></button> -->
+</div>
+ 
+
+<script>
+    let btn = document.querySelector('button')
+    let para = document.createElement('p')
+    let div = document.querySelector('.ris')
+    div.appendChild(para)
+   
+    
+    pal.addEventListener('change', rot)
+    function rot(text){
+        
+        let input = document.querySelector('#pal')
+        text = input.value
+        text = text.toUpperCase()
+        let firstHalf = ['A','B','C','D','E','F','G','H','I','J','K','L','M']
+        let secondHalf = ['N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        let alpha = []
+        let regex = /[a-z]/i
+        for (let x = 0; x < text.length; x++){
+            
+        if(regex.test(text[x])){
+          if(firstHalf.includes(text[x])){
+            alpha.push(secondHalf[firstHalf.indexOf(text[x])])
+          }
+          else{
+            alpha.push(firstHalf[secondHalf.indexOf(text[x])])
+          }
+        }                            
+      else{
+            alpha.push(text[x])
+           }
+        
+         para.textContent = alpha.join('')
+    } 
+}  
+    // para.textContent = alpha
+</script>
+</body>
+</html>
